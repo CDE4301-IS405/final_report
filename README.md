@@ -1,5 +1,5 @@
-# CDE4301 Interim Report
-Last updated: 4 Nov 12.30pm
+# CDE4301 Final Report
+Last updated: 23 March 9am
 
 ## Tools used
 - Grid.js for generating table
