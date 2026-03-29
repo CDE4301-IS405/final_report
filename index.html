@@ -65,22 +65,21 @@
         <sl-tree-item expanded>
           <a href="#1. Introduction">1. Introduction (Sammi)</a> <!-- href tag must match div id tag to allow link-->
           <sl-tree-item>
-            <a href="#1.1 Indoor Air Quality and Pollutants">1.1 Indoor Air Quality and Pollutants</a>
+            <a href="#1.1. Importance of Indoor Air Quality">1.1 Importance of Indoor Air Quality</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#1.2 Volatile Organic Compounds (VOC) in Air">1.2. Volatile Organic Compounds (VOC) in Air</a>
+            <a href="#1.2. Volatile Organic Compounds (VOC) in Indoor Air and Their Impacts">1.2. Volatile Organic
+              Compounds (VOC) in Indoor Air and Their Impacts</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#1.3 Impacts of VOC">1.3 Impacts of VOC</a>
+            <a href="#1.3. Current Solutions to tackle VOC and Their Limitations">1.3 Current Solutions to tackle VOC
+              and Their Limitations</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#1.4 Current Solutions to tackle VOC">1.4 Current Solutions to tackle VOC</a>
+            <a href="#1.4. Plant-Microbe System">1.4 Plant-Microbe System</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#1.5 Plant-Microbe System">1.5. Plant-Microbe System</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#1.6 Current Plant-Microbe Methods in Market">1.6. Current Plant-Microbe Methods in Market</a>
+            <a href="#1.5. Current Plant-Microbe Methods in Market">1.5. Current Plant-Microbe Methods in Market</a>
           </sl-tree-item>
         </sl-tree-item>
 
@@ -315,8 +314,8 @@
         <sl-divider></sl-divider>
         <div id="1. Introduction">
           <h2> 1. Introduction (Sammi)</h2>
-          <div id="1.1 Indoor Air Quality and Pollutants">
-            <h3>1.1 Indoor Air Quality and Pollutants</h3>
+          <div id="1.1. Importance of Indoor Air Quality">
+            <h3>1.1. Importance of Indoor Air Quality</h3>
             <p>
               Air quality is fundamental to human health and well-being, influencing respiratory, cardiovascular, and
               cognitive functions (World Health Organization, 2025). While outdoor air pollution has received greater
@@ -393,8 +392,8 @@
             </p>
           </div>
 
-          <div id="1.2 Volatile Organic Compounds (VOC) in Air">
-            <h3>1.2 Volatile Organic Compounds (VOC) in Air</h3>
+          <div id="1.2. Volatile Organic Compounds (VOC) in Indoor Air and Their Impacts">
+            <h3>1.2. Volatile Organic Compounds (VOC) in Indoor Air and Their Impacts</h3>
             <p>
               Among indoor air pollutants, organic gases such as VOCs show the highest indoor-to-outdoor ratios,
               indicating their
@@ -452,228 +451,397 @@
             </p>
           </div>
 
-          <div id="1.3 Impacts of VOC">
-            <h3>1.3 Impacts of VOC</h3>
+          <div id="1.3. Current Solutions to tackle VOC and Their Limitations">
+            <h3>1.3. Current Solutions to tackle VOC and Their Limitations</h3>
             <p>
-              Exposure to VOCs can lead to a broad spectrum of adverse effects.
+              Existing strategies to manage indoor VOC levels typically follow a hierarchical approach, including source
+              control, ventilation, air cleaning, monitoring, and behavioural controls, as illustrated in Figure 4. They
+              are ranked based on their effectiveness and sustainability, which follows Singapore Standard SS554:2016
+              Code of Practice for indoor air quality, prioritising elimination before ventilation, treatment, behavior
+              and control (NEA, n.d.).
             </p>
-            <ol>
-              <li>
-                <strong>Health Impacts</strong>
-                <p>
-                  Short-term exposure commonly causes eye, nose and throat irritation, headaches, nausea, and dizziness,
-                  while
-                  long-term exposure is linked to damage of the liver, kidneys, and central nervous system and increased
-                  cancer risk from
-                  compounds such as benzene and formaldehyde (Lai, 2025).
-                </p>
-              </li>
+            <!DOCTYPE html>
+            <html lang="en">
 
-              <li>
-                <strong>Environmental Impacts</strong>
-                <p>
-                  In Singapore, the National Environment Agency (NEA) monitors key VOCs, particularly benzene, toluene,
-                  and xylene
-                  (BTX), as they react with nitrogen oxides under sunlight to form ground-level ozone and photochemical
-                  smog, which
-                  degrade air quality and visibility (NEA, 2024).
-                </p>
-              </li>
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Hierarchy pyramid of current strategies tackling VOC</title>
+              <style>
+                /* General styling for the container */
+                .setup-container {
+                  position: relative;
+                  width: 800px;
+                  /* Adjust as needed */
+                  margin: 20px auto;
+                  max-width: 95%;
+                }
 
-              <li>
-                <strong>Productivity and Cognitive Impact</strong>
-                <p>
-                  Beyond health effects, VOC exposure also influences productivity and cognitive performance. A study by
-                  Nanyang
-                  Technological University (NTU) reported that elevated indoor VOC levels correlate with reduced
-                  concentration, memory,
-                  and creative task performance, underscoring the direct link between indoor air quality and workplace
-                  efficiency
-                  (ScienceDaily, 2023).
-                </p>
-              </li>
+                /* Style for the setup image */
+                .setup-image {
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                }
 
-              <li>
-                <strong>Economic Impact</strong>
-                <p>
-                  Industry sources indicate that VOC-related emissions from furniture and building materials are linked
-                  to reduced
-                  workplace productivity, increased sick leave and higher healthcare costs (SFIC, 2025).&nbsp; According
-                  to The Societal
-                  Cost of Modifiable Risk Factors in Singapore (2019), air pollution accounted for approximately S$506
-                  million (95% UI
-                  S$458–588 million) in combined healthcare and productivity losses (Tan et al., 2023).
+                /* Style for the clickable '+' button/hotspot */
+                .hotspot-button {
+                  position: absolute;
+                  background-color: #007bff;
+                  color: white;
+                  border: 2px solid white;
+                  border-radius: 50%;
+                  width: 25px;
+                  height: 25px;
+                  text-align: center;
+                  line-height: 21px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  cursor: pointer;
+                  z-index: 10;
+                  /* Above the image */
+                  transition: background-color 0.2s;
+                }
+
+                .hotspot-button:hover {
+                  background-color: #0056b3;
+                }
+
+                /* Style for the info popup box */
+                .info-popup {
+                  position: absolute;
+                  background-color: rgb(250, 219, 187);
+                  border: 1px solid #ccc;
+                  padding: 15px;
+                  /* Slightly more padding for better readability */
+                  border-radius: 5px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+                  /* WIDENED BOX SETTINGS */
+                  width: 1000px;
+                  max-width: 90%;
+
+                  z-index: 11;
+                  display: none;
+                  /* Initially hidden */
+                }
+
+                .info-popup h4 {
+                  margin-top: 0;
+                  color: #333;
+                }
+
+                /* Positioning the buttons and popups based on the video image */
+                /* Note: Positioning is approximate and based on visual estimation of the video frame */
+
+                /* lvl1 Hotspots */
+                #lvl1-btn {
+                  top: 20%;
+                  left: 70%;
+                }
+
+                /* lvl2 Hotspot */
+                #lvl2-btn {
+                  top: 15%;
+                  left: 65%;
+                }
+
+                /* lvl3 Hotspots */
+                #lvl3-btn {
+                  top: 11%;
+                  left: 60%;
+                }
+
+                /* lvl4 Hotspots */
+                #lvl4-btn {
+                  top: 7%;
+                  left: 56%;
+                }
+
+                /* lvl5 Hotspots */
+                #lvl5-btn {
+                  top: 3%;
+                  left: 51%;
+                }
+
+                /* Positioning the popups relative to their buttons (adjusting left/right based on screen side) */
+                #lvl1-info {
+                  top: 5%;
+                  left: 20%;
+                }
+
+                #lvl2-info {
+                  top: 5%;
+                  left: 15%;
+                }
+
+                #lvl3-info {
+                  top: 5%;
+                  left: 10%;
+                }
+
+                #lvl4-info {
+                  top: 5%;
+                  left: 5%;
+                }
+
+                #lvl5-info {
+                  top: 5%;
+                  left: 2%;
+                }
+
+                /* Adjusted to be on the right side */
+
+                /* Sensor info popups will appear off-screen in the video, but for this demo, let's place one near the plant */
+                /* To simulate the click behavior shown in the video, I'll only add the popups for the Plant and Pollutant */
+              </style>
+            </head>
+
+            <body>
+
+              <div class="setup-container">
+                <img src="assets/1-introduction/Pyramid.png" alt="Hierarchy pyramid of current strategies tackling VOC"
+                  class="setup-image" style="width: 100%; height: auto; display: block;">
+
+                <p style="text-align: center; font-style: italic; margin-top: 5px;">
+                  Figure 4: Hierarchy pyramid of current strategies tackling VOC - Click the + buttons to learn more
                 </p>
-              </li>
-            </ol>
+
+                <button class="hotspot-button" id="lvl1-btn" onclick="togglePopup('lvl1-info')">+</button>
+
+                <button class="hotspot-button" id="lvl2-btn" onclick="togglePopup('lvl2-info')">+</button>
+
+                <button class="hotspot-button" id="lvl3-btn" onclick="togglePopup('lvl3-info')">+</button>
+
+                <button class="hotspot-button" id="lvl4-btn" onclick="togglePopup('lvl4-info')">+</button>
+
+                <button class="hotspot-button" id="lvl5-btn" onclick="togglePopup('lvl5-info')">+</button>
+
+                <div class="info-popup" id="lvl1-info">
+                  <h4>Level 01: Source Control</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Most effective strategy (prevention-based approach)</li>
+                      <li>Eliminating or reducing the sources of pollutants (e.g low-VOC materials, reused chemical
+                        usage)</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Effectiveness depends on accurate identification of emission sources</li>
+                      <li>Limited availability of fully non-toxic alternatives</li>
+                      <li>Continuous emissions from indoor materials make complete elimination difficult (US EPA, 2025)
+                      </li>
+                      <li>Tropical conditions (high temperature and humidity) increase off-gassing and prolong VOC
+                        re-emission (Yin, Gao, Wei, Wu, & Wang, 2024)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl2-info">
+                  <h4>Level 02: Ventilation</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Increases dilution of indoor VOCs/ air exchange through introduction of outdoor air (e.g
+                        opening windows, mechanical ventilation systems with high-efficiency air filters)</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Effectiveness limited in urban environment with poor outdoor air quality</li>
+                      <li>Higher ventilation rates increase energy demand (cooling + dehumidification)</li>
+                      <li>Higher operational costs and reduced sustainability</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl3-info">
+                  <h4>Level 03: Air Cleaning</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Use mechanical/ chemical technologies to actively remove pollutants (e.g HEPA filters,
+                        activated carbon filters, oxidation technologies (PCO, UV))</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>HEPA filters effective in capturing particulate matter, but ineffective for VOCs</li>
+                      <li>Activated carbon adsorbs VOC, but do not destroy them</li>
+                      <li>Risk of VOC re-release once filters saturated and generate secondary waste</li>
+                      <li>Oxidation technologies often exhibit incomplete oxidation, producing harmful by-products</li>
+                      <li>High energy consumption and catalyst degradation over time, releasing harmful TiO<sub>2</sub>
+                        nanoparticles</li>
+                      <li>Overall performance often inconsistent under real indoor conditions</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl4-info">
+                  <h4>Level 04: Monitoring</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Track VOCs level (e.g TVOC, formaldehyde, CO<sub>2</sub>) in real time</li>
+                      <li>Enables early detection of pollutant spikes</li>
+                      <li>Supports timely intervention and improved ventilation controls (Marcham, Miller, Springston,
+                        Hawkins, & Kollmeyer, 2020)</li>
+                      <li>Recommended in Singapore’s SS 554:2016 Code of Practice for Indoor Air Quality</li>
+                      <li>Increase availability of low-cost IAQ sensors</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Does not directly remove pollutants (passive)</li>
+                      <li>Functions mainly as a supporting tool for IAQ management</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl5-info">
+                  <h4>Level 05: Behavioural Controls</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Reduces VOC exposure through occupant actions and habits (e.g. use of low-VOC products and
+                        limiting chemical usage)</li>
+                      <li>Encourage ventilation during pollutant-generating activities and avoid indoor combustion</li>
+                      <li>Can reduce VOC levels by ~20-60% depending on compliance (Modupe Mewomo et al., 2021)</li>
+                      <li>Supported by awareness campaigns and environmental labelling</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Highly dependent on user behaviour and consistency</li>
+                      <li>Not reliable as a standalone long-term solution</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <script>
+                  /**
+                   * Toggles the display of an info popup box.
+                   * @param {string} popupId - The ID of the info popup element to toggle.
+                   */
+                  function togglePopup(popupId) {
+                    const popup = document.getElementById(popupId);
+
+                    // Hide all other popups
+                    document.querySelectorAll('.info-popup').forEach(p => {
+                      if (p.id !== popupId) {
+                        p.style.display = 'none';
+                      }
+                    });
+
+                    // Toggle the target popup
+                    if (popup.style.display === 'block') {
+                      popup.style.display = 'none';
+                    } else {
+                      popup.style.display = 'block';
+                    }
+                  }
+                </script>
+            </body>
+
+            </html>
             <p>
-              Collectively, these findings show that VOCs are not only a public health threat but also an environmental
-              and economic
-              concern with implications for national productivity and sustainability. Reducing VOC emissions is
-              therefore essential
-              and aligns with international health frameworks as well as Singapore’s SS 554:2016 Code of Practice for
-              Indoor Air
-              Quality, which sets guideline limits for total VOCs and formaldehyde. Given their persistence, widespread
-              presence, and
-              well-documented health risks, VOCs remain a key priority in improving indoor air quality and ensuring
-              safer, healthier
-              indoor environments.
+              While these strategies can reduce pollutant exposure, their effectiveness in managing VOCs remains limited
+              due to the continuous and persistent nature of indoor emissions.
+            </p>
+            <p>
+              Monitoring systems provide real-time data on pollutant concentrations but do not actively remove
+              contaminants. Similarly, behavioural controls, such as reducing the use of VOC-emitting products, are
+              highly dependent on consistent user compliance, which is difficult to maintain across varied indoor
+              environments. As a result, these approaches serve primarily as supplementary measures rather than
+              standalone solutions.
+            </p>
+            <p>
+              Source control and ventilation are widely regarded as primary preventive strategies for IAQ improvement.
+              By reducing pollutant emissions and diluting indoor air, these methods can lower VOC concentrations by
+              approximately 55%. However, VOCs are not fully eliminated due to their continuous emission from indoor
+              materials such as furniture, paints, and adhesives (Joo et al., 2025). A meta-analysis of 77 residential
+              IAQ studies further found that multiple VOCs continued to exceed chronic health benchmarks even under
+              typical ventilation conditions, indicating that source control and ventilation alone are insufficient
+              (Logue et al., 2011; Mata et al., 2022).
+            </p>
+            <p>
+              To address the limitations of preventive IAQ strategies, air-cleaning technologies have been widely
+              adopted to actively remove indoor pollutants. These approaches rely on mechanical or chemical processes,
+              however, each presents notable limitations for VOC removal, as summarised in Table 2.
+            </p>
+            <table
+              style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; border: 1px solid black;">
+              <caption style="text-align: left; padding: 10px; font-weight: normal; font-size: 1em;">
+                Table 2: Strengths and limitations of air-cleaning technologies
+              </caption>
+              <thead>
+                <tr style="border: 1px solid black; background-color: #f2f2f2;">
+                  <th style="border: 1px solid black; padding: 10px; width: 25%; text-align: left;">Technology</th>
+                  <th style="border: 1px solid black; padding: 10px; width: 35%; text-align: left;">Strength</th>
+                  <th style="border: 1px solid black; padding: 10px; width: 40%; text-align: left;">Limitation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border: 1px solid black;">
+                  <td style="border: 1px solid black; padding: 10px;">
+                    <strong>HEPA Filters</strong><br>
+                    <span style="font-size: 0.9em; font-style: italic;">(US EPA, 2022)</span>
+                  </td>
+                  <td style="border: 1px solid black; padding: 10px;">Capture up to 99.97% of particles ≥0.3 μm</td>
+                  <td style="border: 1px solid black; padding: 10px;">Ineffective for VOC removal due to its gaseous
+                    nature</td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                  <td style="border: 1px solid black; padding: 10px;">
+                    <strong>Activated Carbon</strong><br>
+                    <span style="font-size: 0.9em; font-style: italic;">(ScienceDirect, 2023)</span>
+                  </td>
+                  <td style="border: 1px solid black; padding: 10px;">Rely on adsorption of VOC</td>
+                  <td style="border: 1px solid black; padding: 10px;">Re-release pollutants upon reaching saturation,
+                    requiring frequent replacement which generates secondary waste</td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                  <td style="border: 1px solid black; padding: 10px;">
+                    <strong>Photocatalytic/ UV Oxidation</strong><br>
+                    <span style="font-size: 0.9em; font-style: italic;">(Zhong et al., 2013; Sivasankar et al.,
+                      2018)</span>
+                  </td>
+                  <td style="border: 1px solid black; padding: 10px;">Degrade VOC</td>
+                  <td style="border: 1px solid black; padding: 10px;">
+                    - Formation of harmful by-products due to potential incomplete oxidation under indoor
+                    conditions<br><br>
+                    - Requires continuous energy input<br>
+                    - Catalyst degradation over time, releasing nanoparticles (TiO<sub>2</sub>)
+                  </td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                  <td style="border: 1px solid black; padding: 10px;">
+                    <strong>Plasma</strong><br>
+                    <span style="font-size: 0.9em; font-style: italic;">(Messan, 2022)</span>
+                  </td>
+                  <td style="border: 1px solid black; padding: 10px;">Degrade VOC</td>
+                  <td style="border: 1px solid black; padding: 10px;">Often modest or inconsistent under indoor
+                    conditions</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              Hence, the limitations associated with existing IAQ strategies, including source control, ventilation, air cleaning, monitoring, and behavioural controls—such as high energy demands, ongoing maintenance requirements, variable performance, and the potential generation of secondary by-products, render them insufficient in addressing the persistent and continuous nature of indoor VOC emissions.
+            </p>
+            <p>
+              In response to this, nature-based solutions such as plant–microbe systems have gained increasing attention for their ability to provide continuous, energy-efficient VOC removal in indoor settings. Plant-based air purification systems have been shown to remove a wide range of VOCs through biological processes, where pollutants are absorbed and metabolised into less harmful compounds. This approach reduces reliance on adsorption or chemical oxidation methods that may generate secondary pollutants. Studies have demonstrated their ability to target compounds such as BTEX, alcohols, and aldehydes (Sheoran et al., 2022). In addition, these systems typically operate with low energy input, require minimal maintenance, and can adapt to varying pollutant levels, making them suitable for long-term and sustainable indoor application.
             </p>
           </div>
 
-          <div id="1.4 Current Solutions to tackle VOC">
-            <h3>1.4 Current Solutions to tackle VOC</h3>
-            <p>
-              There are currently strategies used to tackle indoor VOC levels, as shown in Figure 1 below. The pyramid
-              displays 5
-              different levels of current strategies, which is source control, ventilation, air cleaning, monitoring and
-              behavioural
-              controls. The strategies are ranked based on their effectiveness and sustainability, which follows
-              Singapore Standard
-              SS554:2016 Code of Practice for indoor air quality, prioritising elimination before ventilation,
-              treatment, behavior and
-              control (NEA, n.d.).
-            </p>
-            <image-component tag="image" source="assets/1-introduction/Figure 1.png"
-              subtitle="Figure 1: Hierarchy pyramid of current strategies tackling VOC."></image-component>
-            <p>
-              <b>Level 01: Source Control</b><br>This is the most effective strategy, which involves eliminating or
-              reducing the
-              sources of pollutants. For example, choosing low-VOC paints and building materials and avoiding the use of
-              strong
-              chemical cleaners. However, its effectiveness depends heavily on accurate identification of emission
-              sources and
-              availability of non-toxic substitutes. In the real environments, many VOCs are continuously released from
-              diverse
-              materials, making complete elimination nearly impossible (US EPA, 2025). Even materials certified as
-              low-VOC may become
-              secondary emission sources under tropical conditions. For example, higher humidity and temperature
-              accelerate
-              off-gassing and result in prolonged re-emissions of VOCs from indoor finishes and furnishings (Yin, Gao,
-              Wei, Wu, &
-              Wang, 2024).<br><br>
-            </p>
-            <p>
-              <b>Level 02: Ventilation</b><br> This involves increasing the amount of fresh outdoor air coming into an
-              indoor space.
-              This can be as simple as opening windows and doors, or as technical as using mechanical ventilation
-              systems with
-              high-efficiency air filters to bring in clean air and exhaust polluted air. However, its performance is
-              limited in dense
-              urban areas where outdoor air quality can already be compromised by traffic emissions or haze. Increasing
-              ventilation
-              rates also incurs higher energy consumption for cooling and dehumidification, which contradicts
-              sustainability goals and
-              increases operational costs.<br><br>
-            </p>
-            <p>
-              <b>Level 04: Monitoring</b><br>Monitoring is a preventive-focused strategy that strengthens VOC management
-              by enabling
-              continuous assessment of IAQ and early detection of pollutant spikes. Modern VOC monitoring uses sensors
-              that track
-              total VOCs (TVOC), formaldehyde, carbon dioxide, and other co-pollutants in real time, allowing occupants
-              to intervene
-              before concentrations reach harmful levels. Research shows that integrating IAQ monitoring systems into
-              buildings
-              improves ventilation control, prompt corrective action, and long-term exposure reduction (Marcham, Miller,
-              Springston,
-              Hawkins, & Kollmeyer, 2020). Singapore’s SS 554:2016 Code of Practice for Indoor Air Quality also
-              recommends routine
-              measurement of TVOC and formaldehyde to maintain healthy indoor environments (Singapore Standards, n.d.).
-              With
-              increasing availability of affordable IAQ sensors, monitoring serves as an essential layer of protection,
-              ensuring that
-              VOC levels remain within recommended guidelines and enabling data-driven air-quality management.<br><br>
-            </p>
-            <p>
-              <b>Level 05: Behavioural Controls</b><br>Behavioural controls reduce indoor VOCs by targeting occupant
-              actions that
-              influence emissions, ventilation, and exposure. Strategies include choosing low-VOC or fragrance-free
-              products,
-              improving ventilation during pollutant-generating activities, limiting chemical-based cleaners, and
-              avoiding indoor
-              combustion. Research shows such interventions can lower indoor VOC concentrations by 20–60%, depending on
-              pollutant
-              sources and user adherence (Modupe Mewomo et al., 2021). Public awareness efforts, environmental labelling
-              (e.g.,
-              Singapore Green Label), and workplace programmes further support these habits. As the highest tier of the
-              mitigation
-              hierarchy, behavioural controls strengthen long-term IAQ by addressing VOC generation at its source.
-              <br><br>
-            </p>
-            <p>
-              While monitoring and behavioural controls are important, monitoring only reports VOC levels without
-              removing them, and
-              behavioural measures rely heavily on consistent user compliance—something difficult to sustain across
-              diverse indoor
-              settings. These limitations highlight the need to examine whether lower-tier measures such as source
-              control and
-              ventilation are sufficient on their own.
-            </p>
-            <p>
-              Current IAQ practice prioritises source control and adequate ventilation, which can significantly lower
-              pollutant loads.
-              Source control and ventilation reduce VOC levels by ~55%. However, VOC are not fully eliminated due to the
-              continuous
-              emissions from indoor sources (Joo et al., 2025). A meta-analysis of 77 residential IAQ studies found
-              multiple VOCs
-              still exceeding chronic health benchmarks despite typical ventilation rates, indicating that source
-              control and dilution
-              alone are insufficient, thus calling for focus on active air-cleaning measures (Logue et al., 2011; Mata
-              et al., 2022).
-            </p>
-            <p>
-              <b>Level 03: Air Cleaning</b><br>Air-cleaning strategies rely on mechanical or chemical devices to remove
-              indoor
-              pollutants, but each approach presents significant limitations for VOC management. While HEPA filters
-              capture 99.97% of
-              particles ≥0.3 μm, they are unable to remove VOCs (US EPA, 2022). VOC-targeting technologies, such as
-              activated carbon
-              filters, only adsorb rather than destroy pollutants and can re-release VOCs once saturated, requiring
-              frequent
-              replacement and generating secondary waste (ScienceDirect, 2023). Oxidation-based systems, including
-              photocatalytic
-              oxidation (PCO) and UV oxidation, are able to degrade VOCs but often exhibit incomplete oxidation,
-              producing harmful
-              secondary pollutants such as aldehydes and ultrafine particles (Zhong, Haghighat, & Lee, 2013; R.
-              Sivasankar et al.,
-              2018). These systems also demand continuous high energy input and face catalyst degradation over time,
-              which releases
-              harmful nanoparticles, such as TiO₂ (R. Sivasankar et al., 2018). Empirical studies consistently show that
-              VOC removal
-              efficiencies across activated carbon, PCO, and plasma technologies are modest or inconsistent under real
-              indoor
-              conditions (Messan, 2022). Collectively, the high energy consumption, maintenance requirements, variable
-              performance,
-              and by-product risks associated with conventional air-cleaning technologies highlight the need for safer,
-              more
-              sustainable solutions for indoor VOC mitigation.<br><br>
-            </p>
-            <p>
-              This highlights the need for scalable, sustainable, and nature-based alternatives. Plant–microbe
-              biofiltration systems
-              address these gaps by providing continuous, low-cost, and biologically driven VOC removal, making them a
-              promising
-              next-generation solution for improving indoor air quality in Singapore’s enclosed and air-conditioned
-              environments.
-            </p>
-            <p>
-              Plant–microbe systems provide broad-spectrum VOC removal with low energy use and minimal risk of harmful
-              by-products, as
-              they biologically metabolise VOCs into harmless end products rather than relying on adsorption or chemical
-              oxidation.
-              This synergy allows them to target a wide range of compounds, including BTEX, alcohols, aldehydes and
-              other oxygenated
-              VOCs (Sheoran et al., 2022). Operating passively or with minimal airflow support, these systems require
-              little
-              maintenance, self-regenerate, and adapt to pollutant loads, while also offering biophilic benefits, making
-              them a highly
-              suitable long-term strategy for improving indoor air quality.
-            </p>
+          <div id="1.4. Plant-Microbe System">
+            <h3>1.4. Plant-Microbe System</h3>
+
           </div>
 
-          <div id="1.5 Plant-Microbe System">
-            <h3>1.5 Plant-Microbe System</h3>
+          <div id="1.5. Current Plant-Microbe Methods in Market">
+            <h3>1.5. Current Plant-Microbe Methods in Market</h3>
             <p>
               <image-component tag="image" source="assets/1-introduction/Figure 2.png"
                 subtitle="Figure 2: Phytoremediation process in a plant-microbe system (Images taken from Canva)."></image-component>
@@ -742,8 +910,8 @@
             </p>
           </div>
 
-          <div id="1.6 Current Plant-Microbe Methods in Market">
-            <h3>1.6 Current Plant-Microbe Methods in Market</h3>
+          <div id="1.5. Current Plant-Microbe Methods in Market">
+            <h3>1.5. Current Plant-Microbe Methods in Market</h3>
             <p>
               Currently, three main plant–microbe methods are being researched or implemented for indoor air pollutant
               removal:
