@@ -2323,11 +2323,11 @@
                                 to proceed to the experimental phase, where their VOC removal performance would be
                                 assessed to identify the top-performing plants.
                               </p>
-                              <image-component tag="image" source="assets/4-Plant Selection/Plant Species.png"
-                                subtitle="Figure 30: Plants Selected for Experimentation">
-                              </image-component>
-                              </p>
-                            </div>
+                              <div style="display:flex; justify-content:center;">
+                                <image-component tag="image" source="assets/4-Plant Selection/Plant Species.png"
+                                  subtitle="Figure 30: Plants Selected for Experimentation" style="max-width:500px;">
+                                </image-component>
+                              </div>
 
                             <div id="4.2. Experiments for Top Performing Plants">
                               <h3>4.2. Experiments for Top Performing Plants</h3>
@@ -2479,25 +2479,213 @@
                                 normalized scores for the three criteria were subsequently summed to obtain a composite
                                 score for each plant (Eqn 2), providing an overall measure of VOC removal performance.
                               </p>
-                              <div style="text-align: center; margin: 20px 0; font-family: Arial, sans-serif;">
+                              <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+                              <script id="MathJax-script" async
+                                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-                                <p>
-                                  $ \text{score}_{\text{Performance Metric}} = \frac{x_{\text{max}} - x}{x_{\text{max}}
-                                  - x_{\text{min}}} \times 10 \quad \text{--- Eqn (1)} $
-                                </p>
+                              <div class="report-eqn-container">
 
-                                <br>
+                                <div class="math-row">
+                                  $$ \text{score}_{\text{Performance Metric}} = \frac{x_{\text{max}} - x}{x_{\text{max}}
+                                  - x_{\text{min}}} \times 10 \quad \text{--- Eqn (1)} $$
+                                </div>
 
-                                <p>
-                                  $ \text{Total score} = \text{score}_{\text{Max Change}} + \text{score}_{\text{Time to
-                                  Plateau}} + \text{score}_{\text{Steady State Change}} \quad \text{--- Eqn (2)} $
-                                </p>
-
+                                <div class="math-row">
+                                  $$ \text{Total score} = \text{score}_{\text{Max VOC}} + \text{score}_{\text{Plateau}}
+                                  + \text{score}_{\text{Steady State}} \quad \text{--- Eqn (2)} $$
+                                </div>
                               </div>
+
+                              <style>
+                                .report-eqn-container {
+                                  width: 100%;
+                                  margin: 30px auto;
+                                  text-align: center;
+                                  font-family: Arial, sans-serif;
+                                }
+
+                                .math-row {
+                                  width: 100%;
+                                  overflow-x: auto;
+                                  /* Adds a scrollbar ONLY if the screen is extremely narrow */
+                                  overflow-y: hidden;
+                                  margin-bottom: 25px;
+                                  padding: 10px 0;
+                                }
+
+                                /* Force MathJax to stay in a single horizontal line */
+                                .mjx-container {
+                                  display: inline-block !important;
+                                  margin: 0 !important;
+                                  max-width: 100%;
+                                }
+
+                                /* Adjusts the sizing to ensure fit in report margins */
+                                @media (max-width: 800px) {
+                                  .mjx-container {
+                                    font-size: 0.9em !important;
+                                  }
+                                }
+                              </style>
                               <p>
                                 This enables a systematic and quantitative ranking of plant species, as presented in
                                 Table 13.
                               </p>
+                              <table class="ranking-table">
+                                <caption>Table 13: Ranking of VOC Removal Efficiencies of Selected Plants</caption>
+
+                                <thead>
+                                  <tr>
+                                    <th>Rank</th>
+                                    <th>Plant</th>
+                                    <th>Total Score</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>Pteris argyaea<br>(Silver Brake Fern)</td>
+                                    <td>28.8</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>Chlorophytum comosum<br>(Spider Plant)</td>
+                                    <td>27.9</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td>Begonia maculata<br>(Polka dot begonia)</td>
+                                    <td>27.7</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4</td>
+                                    <td>Philodendron martianum</td>
+                                    <td>27.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5</td>
+                                    <td>Spathiphyllum wallisi<br>(Peace Lily)</td>
+                                    <td>27.4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>6</td>
+                                    <td>Polyscias fruticosa<br>(Ming aralia)</td>
+                                    <td>27.3</td>
+                                  </tr>
+                                  <tr>
+                                    <td>7</td>
+                                    <td>Anthurium andraeanum<br>(Flamingo Lily)</td>
+                                    <td>26.6</td>
+                                  </tr>
+                                  <tr>
+                                    <td>8</td>
+                                    <td>Dracaena fragrans<br>(Dragon plant)</td>
+                                    <td>26.2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>9</td>
+                                    <td>Nematanthus glabra<br>(Goldfish plant)</td>
+                                    <td>25.8</td>
+                                  </tr>
+                                  <tr>
+                                    <td>10</td>
+                                    <td>Sansevieria trifasciata / Dracaena trifasciata<br>(Snake plant)</td>
+                                    <td>25.8</td>
+                                  </tr>
+                                  <tr>
+                                    <td>11</td>
+                                    <td>Fittonia albivenis<br>(Nerve plant)</td>
+                                    <td>25.4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>12</td>
+                                    <td>Hemigraphis alternata / Strobilanthes alternata / Hemigraphis colorata<br>(Red
+                                      Ivy, Red Flame Ivy, Metal Leaf)</td>
+                                    <td>25.3</td>
+                                  </tr>
+                                  <tr>
+                                    <td>13</td>
+                                    <td>Kalanchoë blossfeldiana<br>(Flaming Katy)</td>
+                                    <td>25.1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>14</td>
+                                    <td>Philodendron oxycardium / Philodendron hederaceum</td>
+                                    <td>24.1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>15</td>
+                                    <td>Zamioculcas zamiifolia<br>(ZZ plant)</td>
+                                    <td>23.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>16</td>
+                                    <td>Dracaena reflexa / Dracaena angustifolia<br>(Red-Edged Dracaena)</td>
+                                    <td>23.4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>17</td>
+                                    <td>Aloe aristata<br>(Lace Aloe)</td>
+                                    <td>21.1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>18</td>
+                                    <td>Aglaonema commutatum<br>(Chinese evergreen / Philippine evergreen)</td>
+                                    <td>14.0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>19</td>
+                                    <td>Epipremnum aureum<br>(Money plant / Pothos / Golden Pothos / Devil's Ivy)</td>
+                                    <td>9.9</td>
+                                  </tr>
+                                  <tr>
+                                    <td>20</td>
+                                    <td>Plectranthus tomentosus / Coleus hadiensis / Plectranthus hadiensis<br>(Vicks
+                                      Plant)</td>
+                                    <td>9.2</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <style>
+                                .ranking-table {
+                                  width: 100%;
+                                  border-collapse: collapse;
+                                  margin: 2rem 0;
+                                  font-size: 0.95rem;
+                                  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                }
+
+                                .ranking-table caption {
+                                  text-align: center;
+                                  margin-bottom: 5px;
+                                  font-size: 0.95rem;
+                                  font-style: italic;
+                                }
+
+                                /* Header */
+                                .ranking-table th {
+                                  background-color: #b8d4f1;
+                                  padding: 12px;
+                                  text-align: center;
+                                  font-weight: bold;
+                                  border: 1px solid #2c3e50;
+                                }
+
+                                /* Body cells */
+                                .ranking-table td {
+                                  padding: 14px;
+                                  border: 1px solid #2c3e50;
+                                  vertical-align: top;
+                                  background-color: #ffffff;
+                                }
+
+                                /* Alternate row shading */
+                                .ranking-table tr:nth-child(even) td {
+                                  background-color: #f5f7fa;
+                                }
+                              </style>
                             </div>
 
                             <div id="4.4. Plant Selection Conclusion">
@@ -2879,6 +3067,11 @@
                                   <li>Kaden, D. A., Mandin, C., Nielsen, G. D., & Wolkoff, P. (2010). Formaldehyde. In
                                     www.ncbi.nlm.nih.gov. World Health
                                     Organization. Retrieved from https://www.ncbi.nlm.nih.gov/books/NBK138711/</li>
+                                  <li>
+                                    Kinhal, V. (2023, January 9). Seven crucial applications of Leaf area Data. CID
+                                    Bio-Science.
+                                    http://cid-inc.com/blog/seven-crucial-applications-of-leaf-area-data/#:~:text=Stomatal%20Conductance%20or%20opening%20regulates,correlated%20to%20the%20leaf%20area.
+                                  </li>
                                   <li>Koivisto, Kirsten Inga Kling, Ana Sofia Fonseca, Anders Brostrøm Bluhme, Moreman,
                                     M.,
                                     Yu,
