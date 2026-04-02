@@ -2976,56 +2976,36 @@
                                     criteria were subsequently summed to obtain a composite score for each plant (Eqn
                                     2), providing an overall measure of VOC removal performance.
                                   </p>
-                                  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-                                  <script id="MathJax-script" async
-                                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+                                  <div class="formula-container"
+                                    style="font-family: serif; text-align: center; padding: 25px; background: #f9f9f9; border: 1px solid #2c3e50; position: relative;">
 
-                                  <div class="report-eqn-container">
-
-                                    <div class="math-row">
-                                      $$ \text{score}_{\text{Performance Metric}} = \frac{x_{\text{max}} -
-                                      x}{x_{\text{max}}
-                                      - x_{\text{min}}} \times 10 \quad \text{--- Eqn (1)} $$
+                                    <div
+                                      style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                      <div style="flex-grow: 1;">
+                                        <p><strong>Min-Max Normalization:</strong></p>
+                                        <p style="font-size: 1.1rem;">
+                                          Score = <span style="font-size: 1.3rem;">(</span>
+                                          (x<sub>max</sub> - x) / (x<sub>max</sub> - x<sub>min</sub>)
+                                          <span style="font-size: 1.3rem;">)</span> &times; 10
+                                        </p>
+                                      </div>
+                                      <span style="font-weight: bold; padding-left: 10px;">— eqn (1)</span>
                                     </div>
 
-                                    <div class="math-row">
-                                      $$ \text{Total score} = \text{score}_{\text{Max VOC}} +
-                                      \text{score}_{\text{Plateau}}
-                                      + \text{score}_{\text{Steady State}} \quad \text{--- Eqn (2)} $$
+                                    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+
+                                    <div style="display: flex; align-items: center; justify-content: center;">
+                                      <div style="flex-grow: 1;">
+                                        <p><strong>Total Performance Score:</strong></p>
+                                        <p style="font-size: 1.1rem;">
+                                          Total Score= Score<sub>Max VOC</sub> + Score<sub>Time</sub> + Score<sub>Steady
+                                            State</sub>
+                                        </p>
+                                      </div>
+                                      <span style="font-weight: bold; padding-left: 10px;">— eqn (2)</span>
                                     </div>
+
                                   </div>
-
-                                  <style>
-                                    .report-eqn-container {
-                                      width: 100%;
-                                      margin: 30px auto;
-                                      text-align: center;
-                                      font-family: Arial, sans-serif;
-                                    }
-
-                                    .math-row {
-                                      width: 100%;
-                                      overflow-x: auto;
-                                      /* Adds a scrollbar ONLY if the screen is extremely narrow */
-                                      overflow-y: hidden;
-                                      margin-bottom: 25px;
-                                      padding: 10px 0;
-                                    }
-
-                                    /* Force MathJax to stay in a single horizontal line */
-                                    .mjx-container {
-                                      display: inline-block !important;
-                                      margin: 0 !important;
-                                      max-width: 100%;
-                                    }
-
-                                    /* Adjusts the sizing to ensure fit in report margins */
-                                    @media (max-width: 800px) {
-                                      .mjx-container {
-                                        font-size: 0.9em !important;
-                                      }
-                                    }
-                                  </style>
                                   <p>
                                     This enables a systematic and quantitative ranking of plant species, as presented in
                                     Table 13, with the detailed scores and tabulated results for each plant provided in
@@ -4023,6 +4003,151 @@
 
                                   <div id="Appendix 2: Experimental Considerations and Modifications">
                                     <h3>Appendix 2: Experimental Considerations and Modifications</h3>
+                                    <ol>
+                                      <li>
+                                        Sensitivity of Sensor
+                                      </li>
+                                      <p>
+                                        To ensure reliable data collection, the Awair Element air quality monitor was
+                                        selected for use in this study. The Awair Element is recognized as one of the
+                                        most accurate and reliable commercially available indoor air-quality sensors,
+                                        capable of detecting a wide range of pollutants including VOCs, CO₂, and
+                                        particulate matter (Shipped F, n.d.).
+                                      </p>
+                                      <p>
+                                        Calibration of the sensors was conducted under outdoor ambient conditions for a
+                                        continuous 24-hour period to establish a stable and accurate baseline. This
+                                        baseline provides a reference for detecting changes in VOC levels within the
+                                        enclosed chamber during subsequent experiments. To enhance calibration
+                                        consistency, two Awair Element sensors were placed facing each other during the
+                                        calibration process as shown in Figure X. This arrangement ensured that both
+                                        devices sampled the same air mass, minimizing discrepancies due to airflow
+                                        direction or localized variations in pollutant concentration.
+                                      </p>
+                                      <image-component tag="image" source="assets/Appendix/Sensor.png"
+                                        subtitle="Figure X: Placement of AWAIR Sensors">
+                                      </image-component>
+                                      <p>
+                                        Following outdoor calibration, the sensors were allowed to stabilize briefly
+                                        under indoor conditions before each experimental run. This step ensured that all
+                                        sensors started from comparable baseline readings, improving measurement
+                                        precision and repeatability across tests.
+                                      </p>
+
+                                      <li>
+                                        Chamber Sizing and Modification
+                                      </li>
+                                      <p>
+                                        The chamber size was selected based on several practical and methodological
+                                        considerations. First, the height of the chamber was chosen to accommodate the
+                                        combined height of the plant and its container, ensuring that the plant remained
+                                        upright and unobstructed during the experiment. Second, the base area of the
+                                        chamber had to be sufficiently large to position both the pollutant source and
+                                        the sensor far apart, minimizing the risk of the sensor detecting artificially
+                                        elevated VOC levels from direct release rather than from the ambient chamber
+                                        environment. At the same time, the chamber could not be excessively large, as a
+                                        greater internal volume would dilute the VOC concentration and prolong the time
+                                        needed to reach measurable steady-state levels. Therefore, a moderate-sized
+                                        transparent chamber (H: 56 cm × B: 39 cm × L: 42 cm) was chosen to balance
+                                        spatial requirements, measurement accuracy, and experimental efficiency.
+                                      </p>
+                                      <p>
+                                        To accommodate instrumentation, a small orifice was drilled at the base of the
+                                        chamber (Figure X), allowing the computer fan and sensors to connect to external
+                                        power sources while minimizing leakage of the sealed air. This setup ensures the
+                                        chamber remains effectively enclosed, so that any observed changes in VOC
+                                        concentration can be attributed to the plant or plant–microbe system rather than
+                                        external influences.
+                                      </p>
+                                      <image-component tag="image" source="assets/Appendix/Chamber.png"
+                                        subtitle="Figure X: Orifice at the Base of the Chamber">
+                                      </image-component>
+                                      </p>
+                                      <li>
+                                        Plant Container Modification: Airflow to Plant’s Rhizosphere
+                                      </li>
+                                      <p>
+                                        To optimize pollutant exposure to the plant roots, the container was modified by
+                                        cutting an opening and installing a computer fan, which directs airflow from the
+                                        pollutant source toward the LECA and root zone (Figure X). This arrangement
+                                        ensures that VOCs pass through the rhizosphere, maximizing contact with both the
+                                        plant and microbial components.
+                                      </p>
+                                      <image-component tag="image" source="assets/Appendix/Plant Container.png"
+                                        subtitle="Figure X: Computer Fan attached to Plant Container">
+                                      </image-component>
+                                      </p>
+                                      <li>
+                                        Plant Properties: Growth Medium
+                                      </li>
+                                      <p>
+                                        Lightweight Expanded Clay Aggregate (LECA) was selected as the growth medium due
+                                        to its high porosity, excellent aeration properties, and inert composition,
+                                        making it particularly suitable for indoor plant systems and controlled
+                                        experiments (Fussy & Papenbrock, 2022). The expanded clay structure contains
+                                        numerous internal pores and inter-particle voids that facilitate continuous
+                                        airflow throughout the medium (Watzinger et al., 2021). This enhances oxygen
+                                        availability to the rhizosphere, preventing anaerobic conditions and supporting
+                                        healthy root respiration (Białowiec et al., 2012). Improved aeration is
+                                        especially critical in enclosed experimental setups where natural air
+                                        circulation is limited, as it ensures that VOC-laden air can effectively reach
+                                        the root zone for treatment (Mikkonen et al., 2018).
+                                      </p>
+                                      <p>
+                                        For indoor applications, LECA offers further advantages due to its clean,
+                                        inorganic, and low-maintenance nature. Unlike organic soil, it does not
+                                        decompose, harbor pests, or release organic compounds that could interfere with
+                                        sensitive VOC measurements (Armijos-Moya et al., 2021; Turała & Wieczorek,
+                                        2020). This makes it particularly suitable for studies investigating air quality
+                                        and specific pollutant removal. Moreover, the high surface area provided by its
+                                        porous matrix supports robust microbial attachment and biofilm growth, which is
+                                        essential in plant–microbe systems where rhizospheric microorganisms drive the
+                                        degradation of airborne contaminants (Dordio & Carvalho, 2013; Mikkonen et al.,
+                                        2018).
+                                      </p>
+                                      <p>
+                                        LECA balls were carefully washed prior to use to remove any surface contaminants
+                                        that could interfere with the results. The container was filled with LECA to
+                                        approximately 80% of its volume, maintaining uniform growth medium across all
+                                        setups (Figure X).
+                                      </p>
+                                      </p>
+                                      <li>
+                                        Plant Properties: Amount of Water
+                                      </li>
+                                      <p>
+                                        A volume of 250 mL of water was added to each container to ensure consistent
+                                        hydration, and the same volume of microbial solution was applied to the
+                                        plant–microbe setups by carefully pouring it around the root zone. This ensured
+                                        that the microbes were evenly distributed across the entire root system,
+                                        allowing them to effectively colonize the rhizosphere and enhance VOC
+                                        degradation by metabolizing compounds absorbed by the roots, thereby improving
+                                        overall removal efficiency (Figure X).
+                                      </p>
+                                      <image-component tag="image"
+                                        source="assets/Appendix/Plant Container with Plant.png"
+                                        subtitle="Figure X: Example of Plant Container Set Up with LECA and Solution">
+                                      </image-component>
+                                      </p>
+
+                                      <li>
+                                        Plant Properties: Amount of Light
+                                      </li>
+                                      <p>
+                                        Light exposure was standardised across all experiments to eliminate variability
+                                        arising from differences in ambient lighting conditions. Each experimental setup
+                                        was enclosed using an opaque trash bag to block external light sources, ensuring
+                                        a controlled lighting environment within the chamber. A fixed artificial light
+                                        source was then positioned at a consistent distance and orientation relative to
+                                        the plant for all trials. This approach ensured uniform light intensity and
+                                        exposure duration across experiments, minimising the influence of light
+                                        variability on plant physiological activity and, consequently, on VOC removal
+                                        performance (Figure X).
+                                      </p>
+                                      <image-component tag="image" source="assets/Appendix/Light and Trash Bag.png"
+                                        subtitle="Figure X: Experimental Set up with Trash Bag and Light Source">
+                                      </image-component>
+                                    </ol>
                                   </div>
 
                                   <div id="Appendix 3: Calculation of Amount of Pollutant">
@@ -6533,55 +6658,491 @@
 
                                     <div id="Appendix 6: Plant Selection Scoring">
                                       <h3>Appendix 6: Plant Selection Scoring</h3>
-                                    </div>
-                                    <!--========================================================================-->
-                                    <!--=======================End of REPORT WRITING============================-->
-                                    <!--========================================================================-->
+                                      <p>
+                                        <b>Raw Values</b>
+                                      </p>
+                                      <table class="voc-analysis-table">
+                                        <thead>
+                                          <tr>
+                                            <th>Plant</th>
+                                            <th>Max VOC Level</th>
+                                            <th>Time Taken to Plateau (h)</th>
+                                            <th>Steady State VOC (ppb)</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Epipremnum aureum (Money plant)</td>
+                                            <td>15.1219</td>
+                                            <td>8.75</td>
+                                            <td>1.3995</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Zamioculcas zamiifolia (ZZ plant)</td>
+                                            <td>6.7942</td>
+                                            <td>7.0833</td>
+                                            <td>0.1835</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Dracaena fragrans (Dragon plant)</td>
+                                            <td>2.7047</td>
+                                            <td>7.1667</td>
+                                            <td>0.0971</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Sansevieria trifasciata (Snake plant)</td>
+                                            <td>3.7547</td>
+                                            <td>6.1667</td>
+                                            <td>0.1496</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fittonia albivenis (Nerve plant)</td>
+                                            <td>4.3406</td>
+                                            <td>7.3333</td>
+                                            <td>0.0843</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Hemigraphis alternata (Red Ivy)</td>
+                                            <td>3.8715</td>
+                                            <td>7.0000</td>
+                                            <td>0.1502</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Polyscias fruticosa (Ming aralia)</td>
+                                            <td>2.6182</td>
+                                            <td>6.4167</td>
+                                            <td>-0.0089</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Philodendron oxycardium</td>
+                                            <td>3.5099</td>
+                                            <td>8.0000</td>
+                                            <td>0.2729</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Kalanchoë blossfeldiana (Flaming Katy)</td>
+                                            <td>0.6224</td>
+                                            <td>12.3333</td>
+                                            <td>0.0283</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Aglaonema commutatum (Chinese evergreen)</td>
+                                            <td>20.4121</td>
+                                            <td>6.8333</td>
+                                            <td>0.5810</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Spathiphyllum wallisi (Peace Lily)</td>
+                                            <td>2.2211</td>
+                                            <td>4.6667</td>
+                                            <td>0.1309</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Anthurium andraeanum (Flamingo Lily)</td>
+                                            <td>1.4039</td>
+                                            <td>6.6667</td>
+                                            <td>0.1696</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Dracaena reflexa (Red-Edged Dracaena)</td>
+                                            <td>3.2260</td>
+                                            <td>6.5000</td>
+                                            <td>0.4976</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Aloe aristata (Lace Aloe)</td>
+                                            <td>12.5528</td>
+                                            <td>6.7500</td>
+                                            <td>0.1417</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Philodendron martianum</td>
+                                            <td>2.4044</td>
+                                            <td>6.3333</td>
+                                            <td>-0.0174</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Plectranthus tomentosus (Vicks Plant)</td>
+                                            <td>15.5975</td>
+                                            <td>23.1667</td>
+                                            <td>0.4520</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Chlorophytum comosum (Spider Plant)</td>
+                                            <td>0.7049</td>
+                                            <td>5.8333</td>
+                                            <td>0.0974</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Nematanthus glabra (Goldfish plant)</td>
+                                            <td>3.9209</td>
+                                            <td>6.5833</td>
+                                            <td>0.1069</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Begonia maculata (Polka dot begonia)</td>
+                                            <td>1.3158</td>
+                                            <td>5.8333</td>
+                                            <td>0.0747</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Pteris argyaea (Silver Brake Fern)</td>
+                                            <td>2.3193</td>
+                                            <td>3.2500</td>
+                                            <td>0.0242</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
 
-
-                                    <!-- This is the code to display the scroll to top button for ergonomic -->
-                                    <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-                                    <!-- but it might reduce the user experience. -->
-                                    <!-- This is the code to display the scroll to top button for ergonomic -->
-                                    <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-                                    <!-- but it might reduce the user experience. -->
-                                    <sl-button class="scroll-to-top" variant="primary" size="medium" circle
-                                      onclick="scrollToTop()">
-                                      <sl-icon name="arrow-up" label="Settings"></sl-icon>
-                                    </sl-button>
-
-                                    <!-- Functionality of Sidebar button. -->
-                                    <script>
-                                      function toggleSidebar() {
-                                        const sidebar = document.getElementById('toc-sidebar');
-                                        const content = document.querySelector('.content');
-
-                                        const icon = document.querySelector('.sidebar-toggle sl-icon');
-
-                                        sidebar.classList.toggle('hidden');
-                                        content.classList.toggle('full-width');
-                                        // Toggle icon between hamburger menu and X
-                                        if (sidebar.classList.contains('hidden')) {
-                                          icon.name = 'list';
-                                        } else {
-                                          icon.name = 'x-lg';
+                                      <style>
+                                        .voc-analysis-table {
+                                          width: 100%;
+                                          border-collapse: collapse;
+                                          margin: 2rem 0;
+                                          font-size: 0.95rem;
+                                          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                          font-family: sans-serif;
                                         }
-                                      }
-                                      // Check sidebar state on page load and set icon accordingly
-                                      document.addEventListener('DOMContentLoaded', function () {
-                                        const sidebar = document.getElementById('toc-sidebar');
-                                        const icon = document.querySelector('.sidebar-toggle sl-icon');
 
-                                        // DRY principle violated here but it's okay for now
-                                        if (sidebar.classList.contains('hidden')) {
-                                          icon.name = 'list';
-                                        } else {
-                                          icon.name = 'x-lg';
+                                        .voc-analysis-table caption {
+                                          text-align: center;
+                                          margin-bottom: 0rem;
+                                          padding: 0 0 5px 0;
+                                          font-size: 0.95em;
+                                          font-weight: bold;
                                         }
-                                      });
-                                    </script>
 
-                                    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-                                    <script type="module"
-                                      src="./components/table-component/table-component.js"></script>
+                                        /* Light yellow header row */
+                                        .voc-analysis-table thead tr th {
+                                          background-color: #fff9c4;
+                                          /* Light Yellow */
+                                          padding: 12px;
+                                          text-align: center;
+                                          font-weight: bold;
+                                          border: 1px solid #2c3e50;
+                                        }
+
+                                        /* Standard cell styling */
+                                        .voc-analysis-table td {
+                                          padding: 12px;
+                                          border: 1px solid #2c3e50;
+                                          vertical-align: middle;
+                                          text-align: center;
+                                          background-color: #ffffff;
+                                        }
+
+                                        /* First column light blue styling */
+                                        .voc-analysis-table tbody td:first-child {
+                                          background-color: #b8d4f1;
+                                          /* Your requested light blue */
+                                          text-align: left;
+                                          /* Left align names for readability */
+                                          font-weight: 500;
+                                        }
+
+                                        /* Optional: Stripe effect for non-blue columns */
+                                        .voc-analysis-table tbody tr:nth-child(even) td:not(:first-child) {
+                                          background-color: #f8f9fa;
+                                        }
+
+                                        @media (max-width: 768px) {
+                                          .voc-analysis-table {
+                                            font-size: 0.8rem;
+                                            display: block;
+                                            overflow-x: auto;
+                                          }
+
+                                          .voc-analysis-table th,
+                                          .voc-analysis-table td {
+                                            padding: 8px;
+                                          }
+                                        }
+                                      </style>
+
+                                      <div class="formula-container"
+                                        style="font-family: serif; text-align: center; padding: 20px; background: #f9f9f9; border: 1px solid #2c3e50;">
+                                        <p><strong>Min-Max Normalization:</strong></p>
+                                        <p>Score = ((x<sub>max</sub> - x) / (x<sub>max</sub> - x<sub>min</sub>)) &times;
+                                          10</p>
+                                        <hr>
+                                        <p><strong>Total Performance Score:</strong></p>
+                                        <p>Total = Score<sub>Max VOC</sub> + Score<sub>Time</sub> + Score<sub>Steady
+                                            State</sub></p>
+                                      </div>
+
+                                      <br>
+
+                                      <table class="scoring-table">
+                                        <thead>
+                                          <tr>
+                                            <th rowspan="2" class="cell-plant">Plant</th>
+                                            <th colspan="3" class="header-main">Scoring (normalized from 0-10)</th>
+                                            <th rowspan="2" class="cell-score">Score</th>
+                                          </tr>
+                                          <tr class="header-criteria">
+                                            <th>Maximum Change in VOC Level<br>(the lower, the higher rank)</th>
+                                            <th>Time Taken to Plateau<br>(the faster, the higher rank)</th>
+                                            <th>Final Change in VOC Level<br>(the lower, the higher rank)</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Epipremnum aureum (Money plant)</td>
+                                            <td>2.6732</td>
+                                            <td>7.2385</td>
+                                            <td>0</td>
+                                            <td>9.9117</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Zamioculcas zamiifolia (ZZ plant)</td>
+                                            <td>6.8813</td>
+                                            <td>8.0753</td>
+                                            <td>8.5816</td>
+                                            <td>23.5383</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Dracaena fragrans (Dragon plant)</td>
+                                            <td>8.9478</td>
+                                            <td>8.0335</td>
+                                            <td>9.1918</td>
+                                            <td>26.1731</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Sansevieria trifasciata (Snake plant)</td>
+                                            <td>8.4172</td>
+                                            <td>8.5356</td>
+                                            <td>8.8208</td>
+                                            <td>25.7736</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fittonia albivenis (Nerve plant)</td>
+                                            <td>8.1211</td>
+                                            <td>7.9498</td>
+                                            <td>9.2817</td>
+                                            <td>25.3526</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Hemigraphis alternata (Red Ivy)</td>
+                                            <td>8.3582</td>
+                                            <td>8.1172</td>
+                                            <td>8.8169</td>
+                                            <td>25.2923</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Polyscias fruticosa (Ming aralia)</td>
+                                            <td>8.9915</td>
+                                            <td>8.4100</td>
+                                            <td>9.9398</td>
+                                            <td>27.3413</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Philodendron oxycardium</td>
+                                            <td>8.5409</td>
+                                            <td>7.6151</td>
+                                            <td>7.9510</td>
+                                            <td>24.1070</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Kalanchoë blossfeldiana (Flaming Katy)</td>
+                                            <td>10.0000</td>
+                                            <td>5.4393</td>
+                                            <td>9.6770</td>
+                                            <td>25.1163</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Aglaonema commutatum (Chinese evergreen)</td>
+                                            <td>0</td>
+                                            <td>8.2008</td>
+                                            <td>5.7767</td>
+                                            <td>13.9776</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Spathiphyllum wallisi (Peace Lily)</td>
+                                            <td>9.1921</td>
+                                            <td>9.2887</td>
+                                            <td>8.9532</td>
+                                            <td>27.4341</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Anthurium andraeanum (Flamingo Lily)</td>
+                                            <td>9.6051</td>
+                                            <td>8.2845</td>
+                                            <td>8.6803</td>
+                                            <td>26.5699</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Dracaena reflexa (Red-Edged Dracaena)</td>
+                                            <td>8.6844</td>
+                                            <td>8.3682</td>
+                                            <td>6.3649</td>
+                                            <td>23.4175</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Aloe aristata (Lace Aloe)</td>
+                                            <td>3.9714</td>
+                                            <td>8.2427</td>
+                                            <td>8.8766</td>
+                                            <td>21.0907</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Philodendron martianum</td>
+                                            <td>9.0995</td>
+                                            <td>8.4519</td>
+                                            <td>10.0000</td>
+                                            <td>27.5514</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Plectranthus tomentosus (Vicks Plant)</td>
+                                            <td>2.4329</td>
+                                            <td>0</td>
+                                            <td>6.6869</td>
+                                            <td>9.1198</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Chlorophytum comosum (Spider Plant)</td>
+                                            <td>9.9583</td>
+                                            <td>8.7029</td>
+                                            <td>9.1892</td>
+                                            <td>27.8505</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Nematanthus glabra (Goldfish plant)</td>
+                                            <td>8.3332</td>
+                                            <td>8.3264</td>
+                                            <td>9.1223</td>
+                                            <td>25.7819</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Begonia maculata (Polka dot begonia)</td>
+                                            <td>9.6496</td>
+                                            <td>8.7029</td>
+                                            <td>9.3495</td>
+                                            <td>27.7020</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Pteris argyaea (Silver Brake Fern)</td>
+                                            <td>9.1426</td>
+                                            <td>10.0000</td>
+                                            <td>9.7064</td>
+                                            <td>28.8490</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+
+                                      <style>
+                                        .scoring-table {
+                                          width: 100%;
+                                          border-collapse: collapse;
+                                          font-family: sans-serif;
+                                          font-size: 0.9rem;
+                                          border: 1px solid #000;
+                                        }
+
+                                        .scoring-table th,
+                                        .scoring-table td {
+                                          border: 1px solid #000;
+                                          padding: 10px;
+                                          text-align: center;
+                                          vertical-align: middle;
+                                        }
+
+                                        /* Peach header for Scoring row */
+                                        .header-main {
+                                          background-color: #fce5cd;
+                                          font-weight: bold;
+                                        }
+
+                                        /* Yellow criteria headers */
+                                        .header-criteria {
+                                          background-color: #fff2cc;
+                                          font-size: 0.85rem;
+                                        }
+
+                                        /* "Plant" Cell - Light Blue */
+                                        .cell-plant {
+                                          background-color: #cfe2f3;
+                                          font-weight: bold;
+                                          width: 25%;
+                                        }
+
+                                        /* First column data - Light Blue */
+                                        .scoring-table tbody td:first-child {
+                                          background-color: #cfe2f3;
+                                          text-align: left;
+                                        }
+
+                                        /* "Score" Cell - Light Green */
+                                        .cell-score {
+                                          background-color: #d9ead3;
+                                          font-weight: bold;
+                                        }
+
+                                        /* Final column data - Light Green */
+                                        .scoring-table td:last-child {
+                                          background-color: #d9ead3;
+                                          font-weight: bold;
+                                        }
+
+                                        .scoring-table tbody td {
+                                          background-color: #ffffff;
+                                        }
+
+                                        @media (max-width: 768px) {
+                                          .scoring-table {
+                                            font-size: 0.75rem;
+                                            display: block;
+                                            overflow-x: auto;
+                                          }
+                                        }
+                                      </style>
+</body>
+
+<!--========================================================================-->
+<!--=======================End of REPORT WRITING============================-->
+<!--========================================================================-->
+
+
+<!-- This is the code to display the scroll to top button for ergonomic -->
+<!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+<!-- but it might reduce the user experience. -->
+<!-- This is the code to display the scroll to top button for ergonomic -->
+<!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+<!-- but it might reduce the user experience. -->
+<sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+  <sl-icon name="arrow-up" label="Settings"></sl-icon>
+</sl-button>
+
+<!-- Functionality of Sidebar button. -->
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('toc-sidebar');
+    const content = document.querySelector('.content');
+
+    const icon = document.querySelector('.sidebar-toggle sl-icon');
+
+    sidebar.classList.toggle('hidden');
+    content.classList.toggle('full-width');
+    // Toggle icon between hamburger menu and X
+    if (sidebar.classList.contains('hidden')) {
+      icon.name = 'list';
+    } else {
+      icon.name = 'x-lg';
+    }
+  }
+  // Check sidebar state on page load and set icon accordingly
+  document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('toc-sidebar');
+    const icon = document.querySelector('.sidebar-toggle sl-icon');
+
+    // DRY principle violated here but it's okay for now
+    if (sidebar.classList.contains('hidden')) {
+      icon.name = 'list';
+    } else {
+      icon.name = 'x-lg';
+    }
+  });
+</script>
+
+<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+<script type="module" src="./components/table-component/table-component.js"></script>
 </body>
