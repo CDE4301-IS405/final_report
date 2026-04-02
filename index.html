@@ -2461,19 +2461,77 @@
                                   style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                                 </iframe>
                                 <sub style="display: block; text-align: center; margin-top: 10px;">
-                                  Figure 32: VOC Concentration Removal Comparison between Plants - Interactive Visualisation
+                                  Figure 32: VOC Concentration Removal Comparison between Plants - Interactive
+                                  Visualisation
                                 </sub>
                               </div>
+                              <p>
+                                Based on the three key performance metrics defined in Section 3.2.3.2., raw experimental
+                                results were first obtained for each of the 20 selected plant species. For each
+                                criterion, the plants were then ranked from best to worst, where lower values correspond
+                                to better performance.
+                              </p>
+                              <p>
+                                Following this, scores were assigned using min–max normalization to rescale the values
+                                onto a uniform range of 0 to 10 (Eqn 1). This approach ensures that the best-performing
+                                plant for each criterion receives the highest score, while the poorest-performing plant
+                                receives the lowest score, with all others scaled proportionally in between. The
+                                normalized scores for the three criteria were subsequently summed to obtain a composite
+                                score for each plant (Eqn 2), providing an overall measure of VOC removal performance.
+                              </p>
+                              <div style="text-align: center; margin: 20px 0; font-family: Arial, sans-serif;">
+
+                                <p>
+                                  $ \text{score}_{\text{Performance Metric}} = \frac{x_{\text{max}} - x}{x_{\text{max}}
+                                  - x_{\text{min}}} \times 10 \quad \text{--- Eqn (1)} $
+                                </p>
+
+                                <br>
+
+                                <p>
+                                  $ \text{Total score} = \text{score}_{\text{Max Change}} + \text{score}_{\text{Time to
+                                  Plateau}} + \text{score}_{\text{Steady State Change}} \quad \text{--- Eqn (2)} $
+                                </p>
+
+                              </div>
+                              <p>
+                                This enables a systematic and quantitative ranking of plant species, as presented in
+                                Table 13.
+                              </p>
                             </div>
 
                             <div id="4.4. Plant Selection Conclusion">
                               <h3>4.4. Plant Selection Conclusion</h3>
                               <p>
+                                Based on the composite scoring framework, Pteris argyraea (Silver Brake Fern) and
+                                Chlorophytum comosum (Spider Plant) emerged as the top two performing species,
+                                demonstrating better VOC removal performance across all three evaluation criteria. Both
+                                plants consistently achieved high normalized scores, indicating strong overall
+                                effectiveness in terms of rapid VOC reduction, shorter time to reach steady-state
+                                conditions, and sustained removal capacity.
+                              </p>
+                              <p>
+                                The decision to select two plants, rather than a larger subset, was made to balance
+                                experimental depth with feasibility. The subsequent phase involves a matrix design
+                                incorporating plant–microbe interactions, where the number of experimental conditions
+                                increases multiplicatively with each additional plant species. Expanding the selection
+                                beyond two plants would significantly increase the number of experimental runs required,
+                                thereby reducing the ability to maintain replication, control experimental variability,
+                                and ensure data reliability within given resource and time constraints.
+                              </p>
+                              <p>
+                                At the same time, selecting more than one plant remains important to avoid drawing
+                                conclusions from a single-species system. By including two top-performing yet distinct
+                                species, the study retains sufficient biological variation to assess whether observed
+                                plant–microbe interactions are consistent or species-dependent, while keeping the
+                                experimental design manageable and robust.
+                              </p>
+                              <p>
+                                Therefore, the selection of the top two plants represents a deliberate trade-off between
+                                experimental comprehensiveness and practical feasibility, ensuring both reliability of
+                                results and meaningful comparative analysis in the final phase.
+                              </p>
                             </div>
-
-                            <br />
-                            <br />
-
 
                             <div>
                               <sl-divider></sl-divider>
