@@ -2318,21 +2318,265 @@
                                 <li>
                                   Time Taken to Reach Steady State
                                 </li>
+                                <div class="table-container">
+                                  <table class="time-taken-poc">
+                                    <caption>Table 10: Results of Time Taken to Reach Steady State for Proof of Concept
+                                    </caption>
+                                    <thead>
+                                      <tr class="section-header-row">
+                                        <th colspan="5">Time Taken to Reach Steady State</th>
+                                      </tr>
+                                      <tr class="subheader-row">
+                                        <th></th>
+                                        <th>Snake Plant</th>
+                                        <th>Money Plant</th>
+                                        <th>ZZ Plant</th>
+                                        <th>Dragon Plant</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th class="side-header">No Microbe</th>
+                                        <td>~13h</td>
+                                        <td>~7h</td>
+                                        <td>~6h</td>
+                                        <td>~5h</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="side-header">Bacillus Subtilis</th>
+                                        <td>~3.9h (<span class="green-text">&#x2193; 70.0%</span>)</td>
+                                        <td>~3.7h (<span class="green-text">&#x2193; 47.1%</span>)</td>
+                                        <td>~3.5h (<span class="green-text">&#x2193; 41.7%</span>)</td>
+                                        <td>~3.7h (<span class="green-text">&#x2193; 26.0%</span>)</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+
+                                <style>
+                                  .time-taken-poc {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                    margin: 2rem 0;
+                                    font-size: 0.95rem;
+                                    font-family: Arial, sans-serif;
+                                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                  }
+
+                                  .time-taken-poc caption {
+                                    text-align: center;
+                                    margin-bottom: 0.5rem;
+                                    font-size: 1em;
+                                  }
+
+                                  /* Green header row (Top) */
+                                  .time-taken-poc .section-header-row th {
+                                    background-color: #d9ead3;
+                                    padding: 12px;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    border: 1px solid #2c3e50;
+                                  }
+
+                                  /* Blue header rows (Sub-headers and Side-headers) */
+                                  .time-taken-poc .subheader-row th,
+                                  .time-taken-poc .side-header {
+                                    background-color: #b8d4f1;
+                                    padding: 12px;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    border: 1px solid #2c3e50;
+                                  }
+
+                                  /* Data cells (White) */
+                                  .time-taken-poc td {
+                                    padding: 12px;
+                                    border: 1px solid #2c3e50;
+                                    text-align: center;
+                                    background-color: #ffffff;
+                                  }
+
+                                  /* Trend Colors */
+                                  .time-taken-poc .green-text {
+                                    color: #1a7c2a;
+                                    font-weight: bold;
+                                  }
+
+                                  .time-taken-poc .red-text {
+                                    color: #cc0000;
+                                    /* Highlighting the unexpected increase */
+                                    font-weight: bold;
+                                  }
+
+                                  @media (max-width: 768px) {
+                                    .time-taken-poc {
+                                      font-size: 0.85rem;
+                                    }
+
+                                    .time-taken-poc th,
+                                    .time-taken-poc td {
+                                      padding: 8px;
+                                    }
+                                  }
+                                </style>
                                 <p>
                                   A key performance criterion for an effective phytoremediation system is the rate at
                                   which pollutants are removed and the environment reaches stabilisation. Data from
-                                  Figure
-                                  21 indicate that the time required to reach steady state varies considerably among
-                                  plant-only systems, ranging from approximately 5 to 13 hours.
+                                  Figure 26 indicate that the time required to reach steady state varies considerably
+                                  among plant-only systems, ranging from approximately 5 to 13 hours.
+                                </p>
+                                <p>
+                                  However, a clear and consistent trend emerges with the introduction of Bacillus
+                                  subtilis. For the Snake Plant, Money Plant, and ZZ Plant, the time to reach steady
+                                  state converges to a narrow range of approximately 3.5 to 3.9 hours. This corresponds
+                                  to a substantial reduction in stabilisation time, with improvements of up to 70.0% for
+                                  the Snake Plant and 47.1% for the Money Plant.
+                                </p>
+                                <p>
+                                  The convergence of stabilisation times to an approximately 4-hour window, regardless
+                                  of plant species, suggests that the rate of initial VOC degradation in these systems
+                                  is largely governed by microbial metabolic activity rather than the slower
+                                  plant-driven processes or plant–microbe synergy. In contrast, the Dragon Plant
+                                  exhibited a comparatively modest improvement of 23%, reinforcing earlier observations
+                                  that this particular plant–microbe pairing is less effective for rapid VOC clearance.
+                                </p>
+                                <p>
+                                  To further improve the accuracy and consistency of the analysis, the time taken to
+                                  reach plateau was determined using OriginPro (Figure 27). Specifically, curve-fitting
+                                  and gradient analysis functions within the software were employed to objectively
+                                  identify the point at which the rate of change in VOC concentration approached zero,
+                                  thereby reducing subjectivity associated with manual estimation and enhancing the
+                                  reliability of the results.
+                                </p>
+                                <p>
+                                  <image-component tag="image" source="assets/3-Pre Experiments/OriginPro example.png"
+                                    subtitle="Figure 27: Example of OriginPro reading of Time Taken to Plateau"></image-component>
                                 </p>
                                 <li>
                                   Steady State Change in VOC Level
                                 </li>
+                                <div class="table-container">
+                                  <table class="ss-poc">
+                                    <caption>Table 11: Results of Steady State Change in VOC Level for Proof of Concept
+                                    </caption>
+                                    <thead>
+                                      <tr class="section-header-row">
+                                        <th colspan="5">Steady State Change in VOC Level</th>
+                                      </tr>
+                                      <tr class="subheader-row">
+                                        <th></th>
+                                        <th>Snake Plant</th>
+                                        <th>Money Plant</th>
+                                        <th>ZZ Plant</th>
+                                        <th>Dragon Plant</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th class="side-header">No Microbe</th>
+                                        <td>-33.85 ppb</td>
+                                        <td>-157.44 ppb</td>
+                                        <td>-7.44 ppb</td>
+                                        <td>-8.47 ppb</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="side-header">Bacillus Subtilis</th>
+                                        <td>-54.59 ppb (<span class="green-text">&#x2193; 61.3%</span>)</td>
+                                        <td>-126.0 ppb (<span class="green-text">&#x2193; 20.0%</span>)</td>
+                                        <td>-19.5 ppb (<span class="green-text">&#x2193; 162.1%</span>)</td>
+                                        <td>-227.7 ppb (<span class="green-text">&#x2193; 2588.3%</span>)</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+
+                                <style>
+                                  .ss-poc {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                    margin: 2rem 0;
+                                    font-size: 0.95rem;
+                                    font-family: Arial, sans-serif;
+                                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                  }
+
+                                  .ss-poc caption {
+                                    text-align: center;
+                                    margin-bottom: 0.5rem;
+                                    font-size: 1em;
+                                  }
+
+                                  /* Green header row (Top) */
+                                  .ss-poc .section-header-row th {
+                                    background-color: #d9ead3;
+                                    padding: 12px;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    border: 1px solid #2c3e50;
+                                  }
+
+                                  /* Blue header rows (Sub-headers and Side-headers) */
+                                  .ss-poc .subheader-row th,
+                                  .ss-poc .side-header {
+                                    background-color: #b8d4f1;
+                                    padding: 12px;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    border: 1px solid #2c3e50;
+                                  }
+
+                                  /* Data cells (White) */
+                                  .ss-poc td {
+                                    padding: 12px;
+                                    border: 1px solid #2c3e50;
+                                    text-align: center;
+                                    background-color: #ffffff;
+                                  }
+
+                                  /* Trend Colors */
+                                  .ss-poc .green-text {
+                                    color: #1a7c2a;
+                                    font-weight: bold;
+                                  }
+
+                                  .ss-poc .red-text {
+                                    color: #cc0000;
+                                    /* Highlighting the unexpected increase */
+                                    font-weight: bold;
+                                  }
+
+                                  @media (max-width: 768px) {
+                                    .ss-poc {
+                                      font-size: 0.85rem;
+                                    }
+
+                                    .ss-poc th,
+                                    .ss-poc td {
+                                      padding: 8px;
+                                    }
+                                  }
+                                </style>
                                 <p>
                                   The final performance metric considered is the system’s ability to maintain a low VOC
                                   baseline after the initial pollutant load has been reduced. The results indicate that
                                   the steady-state VOC concentrations vary across different plant–microbe pairings,
                                   reflecting differences in the long-term “maintenance” capacity of each system.
+                                </p>
+                                <p>
+                                  For the Snake Plant, the addition of Bacillus subtilis resulted in a substantial
+                                  improvement, reducing the steady-state VOC concentration by 61.3% compared to the
+                                  plant-only setup. This demonstrates the effectiveness of the plant–microbe combination
+                                  not only in initial pollutant removal but also in sustaining low VOC levels over time.
+                                  The Dragon Plant, however, provided a distinct insight into system stability. While
+                                  the plant-only configuration exhibited difficulty in maintaining a steady state over
+                                  the 24-hour period, the introduction of Bacillus subtilis enabled the system to
+                                  achieve and maintain a stable, albeit higher, baseline concentration.
+                                </p>
+                                <p>
+                                  These observations suggest that even in less optimal plant–microbe pairings, microbial
+                                  addition can impart a stabilising effect by preventing VOC rebound, although it may
+                                  not achieve the same level of removal efficiency observed in more effective
+                                  combinations such as the Snake Plant–Bacillus subtilis system.
                                 </p>
                               </ol>
                             </div>
@@ -2639,16 +2883,15 @@
                                   </p>
                                   <p>
                                     Following this, scores were assigned using min–max normalization to rescale the
-                                    values
-                                    onto a uniform range of 0 to 10 (Eqn 1). This approach ensures that the
-                                    best-performing
-                                    plant for each criterion receives the highest score, while the poorest-performing
-                                    plant
-                                    receives the lowest score, with all others scaled proportionally in between. The
-                                    normalized scores for the three criteria were subsequently summed to obtain a
-                                    composite
-                                    score for each plant (Eqn 2), providing an overall measure of VOC removal
-                                    performance.
+                                    values onto a uniform range of 0 to 10 (Eqn 1). This approach ensures that the
+                                    best-performing plant for each criterion receives the highest score, while the
+                                    poorest-performing plant receives the lowest score, with all others scaled
+                                    proportionally in between. Min–max normalization was selected because it preserves
+                                    the relative differences between plants without disproportionately penalizing those
+                                    that perform only slightly worse than higher-ranked plants, ensuring a fairer and
+                                    more consistent comparison across criteria. The normalized scores for the three
+                                    criteria were subsequently summed to obtain a composite score for each plant (Eqn
+                                    2), providing an overall measure of VOC removal performance.
                                   </p>
                                   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
                                   <script id="MathJax-script" async
