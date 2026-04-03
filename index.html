@@ -1612,6 +1612,150 @@
                               varying parameter. The step-by-step procedure for each experimental run is illustrated in
                               Table 5.
                             </p>
+                            <div class="table-container">
+                              <table class="setup-procedure-table">
+                                <caption>Table 5: Experimental Set Up Procedure</caption>
+                                <thead></thead>
+                                <tr class="column-header-row">
+                                  <th style="width: 8%;">Step</th>
+                                  <th style="width: 32%;">Description</th>
+                                  <th style="width: 60%;">Rationale</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="step-num">1</td>
+                                    <td class="desc-cell">Calibrate VOC sensors in ambient outdoor conditions; transfer
+                                      to chamber once stable</td>
+                                    <td class="rationale-cell">To establish a stable and accurate baseline for VOC
+                                      measurements, sensors were calibrated under ambient outdoor conditions for 24
+                                      hours, ensuring reliable detection of concentration changes during experiments.
+                                      This also minimizes sensor drift and improves consistency across trials.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="step-num">2</td>
+                                    <td class="desc-cell">Rinse LECA to remove impurities and transplant plant into the
+                                      plant container with the clean medium and fan</td>
+                                    <td class="rationale-cell">LECA was rinsed to remove surface contaminants that could
+                                      interfere with VOC measurements. Its inert and porous structure supports airflow
+                                      and microbial attachment, while the integrated fan directs VOC-laden air toward
+                                      the rhizosphere to enhance pollutant–root interaction.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="step-num">3</td>
+                                    <td class="desc-cell">Apply 250ml of water via wash bottle to saturate the
+                                      rhizosphere</td>
+                                    <td class="rationale-cell">A fixed volume of water ensures consistent hydration and
+                                      supports microbial activity within the rhizosphere, promoting effective VOC
+                                      degradation while maintaining uniform conditions across all setups.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="step-num">4</td>
+                                    <td class="desc-cell">Dispense 1cm³ of each pollutant into internal cups using a
+                                      syringe; cover with cards to prevent VOC volatilization</td>
+                                    <td class="rationale-cell">Using precise volumes ensures controlled and repeatable
+                                      pollutant dosing. Covering the pollutants prevents premature volatilization,
+                                      ensuring that VOC release begins only upon initiation of the experiment.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="step-num">5</td>
+                                    <td class="desc-cell">Power sensors and circulation fans; seal all orifices with blu
+                                      tack</td>
+                                    <td class="rationale-cell">Activating sensors and fans ensures proper air
+                                      circulation and real-time monitoring, while sealing orifices minimizes air
+                                      leakage, maintaining a closed system so that VOC changes can be attributed solely
+                                      to the plant system.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="step-num">6</td>
+                                    <td class="desc-cell">Remove pollutant covers and immediately secure the chamber lid
+                                      with masking tape</td>
+                                    <td class="rationale-cell">Initiating the experiment by removing covers allows for a
+                                      synchronized start time for VOC volatilization. Sealing the lid immediately
+                                      prevents the escape of initial gas concentrations, ensuring a sealed environment
+                                      for accurate rate-of-change analysis.</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="step-num">7</td>
+                                    <td class="desc-cell">Cover chamber with trash bag and turn on lamps</td>
+                                    <td class="rationale-cell">Blocking external light ensures consistent lighting
+                                      conditions, while the controlled artificial light source standardizes plant
+                                      physiological activity, reducing variability in VOC removal performance.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+                            <style>
+                              .setup-procedure-table {
+                                width: 100%;
+                                border-collapse: collapse;
+                                margin: 2rem 0;
+                                font-size: 0.95rem;
+                                font-family: Arial, sans-serif;
+                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                              }
+
+                              .setup-procedure-table caption {
+                                text-align: center;
+                                margin-bottom: 0rem;
+                                padding: 0 0 5px 0;
+                                font-size: 0.95rem;
+                              }
+
+                              /* Green Header (Matches your VOC Max table) */
+                              .setup-procedure-table .main-header-row th {
+                                background-color: #d9ead3;
+                                padding: 15px;
+                                text-align: center;
+                                border: 1px solid #2c3e50;
+                                color: #2c3e50;
+                              }
+
+                              /* Blue Header (Matches your side-headers) */
+                              .setup-procedure-table .column-header-row th {
+                                background-color: #b8d4f1;
+                                padding: 12px;
+                                text-align: center;
+                                font-weight: bold;
+                                border: 1px solid #2c3e50;
+                              }
+
+                              .setup-procedure-table td {
+                                padding: 12px;
+                                border: 1px solid #2c3e50;
+                                vertical-align: top;
+                                line-height: 1.4;
+                                background-color: #ffffff;
+                              }
+
+                              .setup-procedure-table .step-num {
+                                text-align: center;
+                                font-weight: bold;
+                                background-color: #f8f9fa;
+                              }
+
+                              .setup-procedure-table .desc-cell {
+                                font-weight: 500;
+                              }
+
+                              .setup-procedure-table .rationale-cell {
+                                text-align: justify;
+                                font-size: 0.9rem;
+                                color: #333;
+                              }
+
+                              /* Zebra striping for readability */
+                              .setup-procedure-table tr:nth-child(even) td {
+                                background-color: #fafafa;
+                              }
+
+                              @media (max-width: 768px) {
+                                .setup-procedure-table {
+                                  font-size: 0.85rem;
+                                }
+                              }
+                            </style>
                           </div>
 
                           <div id="3.1.4. Results and Discussions">
@@ -4576,7 +4720,8 @@
                                       runs.
                                     </p>
                                   </div>
-                                  <div id="Appendix 5: Summary of Research Studies of VOC Removal Efficiency of Shortlisted Plants">
+                                  <div
+                                    id="Appendix 5: Summary of Research Studies of VOC Removal Efficiency of Shortlisted Plants">
                                     <h3>Appendix 5: Summary of Research Studies of VOC Removal Efficiency of Shortlisted
                                       Plants
                                     </h3>
