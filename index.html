@@ -7967,8 +7967,11 @@
 <script>
   function buildTOCFromHTML() {
     const content = document.querySelector('.content');
-    // First find <div id="(something)"> elements inside <div class="content"> and ignore info-popups
-    const allDivs = Array.from(content.querySelectorAll('div[id]')).filter(div => !div.classList.contains('info-popup'));
+    // First find <div id="(something)"> elements inside <div class="content"> and ignore info-popups and equation IDs (starting with 'eq')
+    const allDivs = Array.from(content.querySelectorAll('div[id]')).filter(div => {
+      const id = div.id.trim().toLowerCase();
+      return !div.classList.contains('info-popup') && !id.startsWith('eq');
+    });
 
     const flattenedTOC = [];
 
