@@ -11,3 +11,7 @@
   margin: 24px 0;
   word-wrap: break-word;
 }
+
+.references p {
+  text-align: left;
+}
