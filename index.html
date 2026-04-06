@@ -405,32 +405,32 @@
 
               /* lvl1 Hotspots */
               #lvl1-btn {
-                top: 20%;
-                left: 70%;
+                top: 75.8%;
+                left: 60%;
               }
 
               /* lvl2 Hotspot */
               #lvl2-btn {
-                top: 15%;
-                left: 65%;
+                top: 59%;
+                left: 57%;
               }
 
               /* lvl3 Hotspots */
               #lvl3-btn {
-                top: 11%;
-                left: 60%;
+                top: 42%;
+                left: 55%;
               }
 
               /* lvl4 Hotspots */
               #lvl4-btn {
-                top: 7%;
-                left: 56%;
+                top: 25.5%;
+                left: 52%;
               }
 
               /* lvl5 Hotspots */
               #lvl5-btn {
-                top: 3%;
-                left: 51%;
+                top: 7%;
+                left: 49%;
               }
 
               /* Positioning the popups relative to their buttons (adjusting left/right based on screen side) */
@@ -463,127 +463,155 @@
 
               /* Sensor info popups will appear off-screen in the video, but for this demo, let's place one near the plant */
               /* To simulate the click behavior shown in the video, I'll only add the popups for the Plant and Pollutant */
+              
+              .image-wrapper {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+              }
+
+              .close-popup {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                cursor: pointer;
+                font-size: 20px;
+                color: #888;
+                font-weight: bold;
+                line-height: 1;
+              }
+
+              .close-popup:hover {
+                color: #000;
+              }
             </style>
             <div class="setup-container">
-              <img src="assets/1-introduction/Figure 4.png" alt="Hierarchy pyramid of current strategies tackling VOC"
-                class="setup-image" style="width: 100%; height: auto; display: block;">
+              <div class="image-wrapper">
+                <img src="assets/1-introduction/Figure 4.png" alt="Hierarchy pyramid of current strategies tackling VOC"
+                  class="setup-image" style="width: 100%; height: auto; display: block;">
+
+                <button class="hotspot-button" id="lvl1-btn" onclick="togglePopup('lvl1-info')">+</button>
+
+                <button class="hotspot-button" id="lvl2-btn" onclick="togglePopup('lvl2-info')">+</button>
+
+                <button class="hotspot-button" id="lvl3-btn" onclick="togglePopup('lvl3-info')">+</button>
+
+                <button class="hotspot-button" id="lvl4-btn" onclick="togglePopup('lvl4-info')">+</button>
+
+                <button class="hotspot-button" id="lvl5-btn" onclick="togglePopup('lvl5-info')">+</button>
+
+                <div class="info-popup" id="lvl1-info">
+                  <span class="close-popup" onclick="togglePopup('lvl1-info')">&times;</span>
+                  <h4>Level 01: Source Control</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000; font-size: 17.5px;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Most effective strategy (prevention-based approach)</li>
+                      <li>Eliminating or reducing the sources of pollutants (e.g low-VOC materials, reused chemical
+                        usage)</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Effectiveness depends on accurate identification of emission sources</li>
+                      <li>Limited availability of fully non-toxic alternatives</li>
+                      <li>Continuous emissions from indoor materials make complete elimination difficult (US EPA, 2025)
+                      </li>
+                      <li>Tropical conditions (high temperature and humidity) increase off-gassing and prolong VOC
+                        re-emission (Yin, Gao, Wei, Wu, & Wang, 2024)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl2-info">
+                  <span class="close-popup" onclick="togglePopup('lvl2-info')">&times;</span>
+                  <h4>Level 02: Ventilation</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000; font-size: 17.5px;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Increases dilution of indoor VOCs/ air exchange through introduction of outdoor air (e.g
+                        opening windows, mechanical ventilation systems with high-efficiency air filters)</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Effectiveness limited in urban environment with poor outdoor air quality</li>
+                      <li>Higher ventilation rates increase energy demand (cooling + dehumidification)</li>
+                      <li>Higher operational costs and reduced sustainability</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl3-info">
+                  <span class="close-popup" onclick="togglePopup('lvl3-info')">&times;</span>
+                  <h4>Level 03: Air Cleaning</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000; font-size: 17.5px;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Use mechanical/ chemical technologies to actively remove pollutants (e.g HEPA filters,
+                        activated carbon filters, oxidation technologies (PCO, UV))</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>HEPA filters effective in capturing particulate matter, but ineffective for VOCs</li>
+                      <li>Activated carbon adsorbs VOC, but do not destroy them</li>
+                      <li>Risk of VOC re-release once filters saturated and generate secondary waste</li>
+                      <li>Oxidation technologies often exhibit incomplete oxidation, producing harmful by-products</li>
+                      <li>High energy consumption and catalyst degradation over time, releasing harmful TiO<sub>2</sub>
+                        nanoparticles</li>
+                      <li>Overall performance often inconsistent under real indoor conditions</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl4-info">
+                  <span class="close-popup" onclick="togglePopup('lvl4-info')">&times;</span>
+                  <h4>Level 04: Monitoring</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000; font-size: 17.5px;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Track VOCs level (e.g TVOC, formaldehyde, CO<sub>2</sub>) in real time</li>
+                      <li>Enables early detection of pollutant spikes</li>
+                      <li>Supports timely intervention and improved ventilation controls (Marcham, Miller, Springston,
+                        Hawkins, & Kollmeyer, 2020)</li>
+                      <li>Recommended in Singapore’s SS 554:2016 Code of Practice for Indoor Air Quality</li>
+                      <li>Increase availability of low-cost IAQ sensors</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Does not directly remove pollutants (passive)</li>
+                      <li>Functions mainly as a supporting tool for IAQ management</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="info-popup" id="lvl5-info">
+                  <span class="close-popup" onclick="togglePopup('lvl5-info')">&times;</span>
+                  <h4>Level 05: Behavioural Controls</h4>
+                  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000; font-size: 16px;">
+                    <ul style="list-style-type: '- '; margin-bottom: 15px;">
+                      <li>Reduces VOC exposure through occupant actions and habits (e.g. use of low-VOC products and
+                        limiting chemical usage)</li>
+                      <li>Encourage ventilation during pollutant-generating activities and avoid indoor combustion</li>
+                      <li>Can reduce VOC levels by ~20-60% depending on compliance (Modupe Mewomo et al., 2021)</li>
+                      <li>Supported by awareness campaigns and environmental labelling</li>
+                    </ul>
+
+                    <p style="margin-bottom: 5px;">Limitations:</p>
+
+                    <ul style="list-style-type: '- '; margin-top: 0;">
+                      <li>Highly dependent on user behaviour and consistency</li>
+                      <li>Not reliable as a standalone long-term solution</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
               <p style="text-align: center; font-style: italic; margin-top: 5px;">
                 Figure 4: Hierarchy pyramid of current strategies tackling VOC - Click the + buttons to learn more
               </p>
-
-              <button class="hotspot-button" id="lvl1-btn" onclick="togglePopup('lvl1-info')">+</button>
-
-              <button class="hotspot-button" id="lvl2-btn" onclick="togglePopup('lvl2-info')">+</button>
-
-              <button class="hotspot-button" id="lvl3-btn" onclick="togglePopup('lvl3-info')">+</button>
-
-              <button class="hotspot-button" id="lvl4-btn" onclick="togglePopup('lvl4-info')">+</button>
-
-              <button class="hotspot-button" id="lvl5-btn" onclick="togglePopup('lvl5-info')">+</button>
-
-              <div class="info-popup" id="lvl1-info">
-                <h4>Level 01: Source Control</h4>
-                <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
-                  <ul style="list-style-type: '- '; margin-bottom: 15px;">
-                    <li>Most effective strategy (prevention-based approach)</li>
-                    <li>Eliminating or reducing the sources of pollutants (e.g low-VOC materials, reused chemical
-                      usage)</li>
-                  </ul>
-
-                  <p style="margin-bottom: 5px;">Limitations:</p>
-
-                  <ul style="list-style-type: '- '; margin-top: 0;">
-                    <li>Effectiveness depends on accurate identification of emission sources</li>
-                    <li>Limited availability of fully non-toxic alternatives</li>
-                    <li>Continuous emissions from indoor materials make complete elimination difficult (US EPA, 2025)
-                    </li>
-                    <li>Tropical conditions (high temperature and humidity) increase off-gassing and prolong VOC
-                      re-emission (Yin, Gao, Wei, Wu, & Wang, 2024)</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="info-popup" id="lvl2-info">
-                <h4>Level 02: Ventilation</h4>
-                <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
-                  <ul style="list-style-type: '- '; margin-bottom: 15px;">
-                    <li>Increases dilution of indoor VOCs/ air exchange through introduction of outdoor air (e.g
-                      opening windows, mechanical ventilation systems with high-efficiency air filters)</li>
-                  </ul>
-
-                  <p style="margin-bottom: 5px;">Limitations:</p>
-
-                  <ul style="list-style-type: '- '; margin-top: 0;">
-                    <li>Effectiveness limited in urban environment with poor outdoor air quality</li>
-                    <li>Higher ventilation rates increase energy demand (cooling + dehumidification)</li>
-                    <li>Higher operational costs and reduced sustainability</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="info-popup" id="lvl3-info">
-                <h4>Level 03: Air Cleaning</h4>
-                <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
-                  <ul style="list-style-type: '- '; margin-bottom: 15px;">
-                    <li>Use mechanical/ chemical technologies to actively remove pollutants (e.g HEPA filters,
-                      activated carbon filters, oxidation technologies (PCO, UV))</li>
-                  </ul>
-
-                  <p style="margin-bottom: 5px;">Limitations:</p>
-
-                  <ul style="list-style-type: '- '; margin-top: 0;">
-                    <li>HEPA filters effective in capturing particulate matter, but ineffective for VOCs</li>
-                    <li>Activated carbon adsorbs VOC, but do not destroy them</li>
-                    <li>Risk of VOC re-release once filters saturated and generate secondary waste</li>
-                    <li>Oxidation technologies often exhibit incomplete oxidation, producing harmful by-products</li>
-                    <li>High energy consumption and catalyst degradation over time, releasing harmful TiO<sub>2</sub>
-                      nanoparticles</li>
-                    <li>Overall performance often inconsistent under real indoor conditions</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="info-popup" id="lvl4-info">
-                <h4>Level 04: Monitoring</h4>
-                <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
-                  <ul style="list-style-type: '- '; margin-bottom: 15px;">
-                    <li>Track VOCs level (e.g TVOC, formaldehyde, CO<sub>2</sub>) in real time</li>
-                    <li>Enables early detection of pollutant spikes</li>
-                    <li>Supports timely intervention and improved ventilation controls (Marcham, Miller, Springston,
-                      Hawkins, & Kollmeyer, 2020)</li>
-                    <li>Recommended in Singapore’s SS 554:2016 Code of Practice for Indoor Air Quality</li>
-                    <li>Increase availability of low-cost IAQ sensors</li>
-                  </ul>
-
-                  <p style="margin-bottom: 5px;">Limitations:</p>
-
-                  <ul style="list-style-type: '- '; margin-top: 0;">
-                    <li>Does not directly remove pollutants (passive)</li>
-                    <li>Functions mainly as a supporting tool for IAQ management</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="info-popup" id="lvl5-info">
-                <h4>Level 05: Behavioural Controls</h4>
-                <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #000;">
-                  <ul style="list-style-type: '- '; margin-bottom: 15px;">
-                    <li>Reduces VOC exposure through occupant actions and habits (e.g. use of low-VOC products and
-                      limiting chemical usage)</li>
-                    <li>Encourage ventilation during pollutant-generating activities and avoid indoor combustion</li>
-                    <li>Can reduce VOC levels by ~20-60% depending on compliance (Modupe Mewomo et al., 2021)</li>
-                    <li>Supported by awareness campaigns and environmental labelling</li>
-                  </ul>
-
-                  <p style="margin-bottom: 5px;">Limitations:</p>
-
-                  <ul style="list-style-type: '- '; margin-top: 0;">
-                    <li>Highly dependent on user behaviour and consistency</li>
-                    <li>Not reliable as a standalone long-term solution</li>
-                  </ul>
-                </div>
-              </div>
 
               <script>
                 /**
@@ -4439,7 +4467,7 @@
                                   </div>
                                 </div>
 
-                                <div id="7. Limitations of Project (Sammi)">
+                                <div id="7. Limitations of Project (Sammi)"><sl-divider></sl-divider>
                                   <h2>7. Limitations of Project (Sammi)</h2>
                                   <p>This study incorporates several controlled conditions and practical constraints
                                     that may influence the generalisability of the results when applied to real-world
