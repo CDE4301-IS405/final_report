@@ -81,6 +81,10 @@ h1 {
   --image-width: 60%;
 }
 
+.left-align-table p {
+  text-align: left;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .sidebar {
